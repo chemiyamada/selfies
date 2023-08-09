@@ -13,7 +13,7 @@ ELEMENTS = {
     r"*" # modified for polymer 
 }
 
-ORGANIC_SUBSET = {"B", "C", "N", "O", "S", "P", "F", "Cl", "Br", "I"}
+ORGANIC_SUBSET = {"B", "C", "N", "O", "S", "P", "F", "Cl", "Br", "I", r"*" # modified for polymer}
 
 AROMATIC_VALENCES = {
     "B": (3,), "Al": (3,),
