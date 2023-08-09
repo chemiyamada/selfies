@@ -9,7 +9,8 @@ ELEMENTS = {
     "Ds", "Rg", "Cn", "Fl", "Lv", "La", "Ce", "Pr", "Nd", "Pm", "Sm",
     "Eu", "Gd", "Tb", "Dy", "Ho", "Er", "Tm", "Yb", "Lu", "Ac", "Th",
     "Pa", "U", "Np", "Pu", "Am", "Cm", "Bk", "Cf", "Es", "Fm", "Md",
-    "No", "Lr"
+    "No", "Lr",
+    r"*" # modified for polymer 
 }
 
 ORGANIC_SUBSET = {"B", "C", "N", "O", "S", "P", "F", "Cl", "Br", "I"}
@@ -32,7 +33,8 @@ INDEX_ALPHABET = (
     "[C]", "[Ring1]", "[Ring2]",
     "[Branch1]", "[=Branch1]", "[#Branch1]",
     "[Branch2]", "[=Branch2]", "[#Branch2]",
-    "[O]", "[N]", "[=N]", "[=C]", "[#C]", "[S]", "[P]"
+    "[O]", "[N]", "[=N]", "[=C]", "[#C]", "[S]", "[P]",
+    r"[*]" # modified for polymer
 )
 
 INDEX_CODE = {c: i for i, c in enumerate(INDEX_ALPHABET)}
