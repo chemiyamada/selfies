@@ -12,7 +12,8 @@ _DEFAULT_CONSTRAINTS = {
     "C": 4, "C+1": 5, "C-1": 3,
     "P": 5, "P+1": 6, "P-1": 4,
     "S": 6, "S+1": 7, "S-1": 5,
-    "?": 8
+    "?": 8,
+    r"*": 1 # modified for polymer
 }
 
 _PRESET_CONSTRAINTS = {
