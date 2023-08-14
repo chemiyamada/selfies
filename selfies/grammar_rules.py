@@ -107,7 +107,7 @@ SELFIES_ATOM_PATTERN = re.compile(
     r"^[\[]"  # opening square bracket [
     r"([=#/\\]?)"  # bond char
     r"(\d*)"  # isotope number (optional, e.g. 123, 26)
-    r"([A-Z][a-z]?)"  # element symbol
+    r"([A-Z][a-z]?|\*)"  # element symbol or "*" # modified for polymer
     r"([@]{0,2})"  # chiral_tag (optional, only @ and @@ supported)
     r"((?:[H]\d)?)"  # H count (optional, e.g. H1, H3)
     r"((?:[+-][1-9]+)?)"  # charge (optional, e.g. +1)
@@ -164,7 +164,8 @@ def _build_atom_cache():
         "[=C]", "[=N+1]", "[=N-1]", "[=N]", "[=O+1]", "[=O]", "[=P+1]",
         "[=P-1]", "[=P]", "[=S+1]", "[=S-1]", "[=S]", "[Br]", "[C+1]", "[C-1]",
         "[C]", "[Cl]", "[F]", "[H]", "[I]", "[N+1]", "[N-1]", "[N]", "[O+1]",
-        "[O-1]", "[O]", "[P+1]", "[P-1]", "[P]", "[S+1]", "[S-1]", "[S]"
+        "[O-1]", "[O]", "[P+1]", "[P-1]", "[P]", "[S+1]", "[S-1]", "[S]",
+        "[*]" # modified for polymer
     ]
 
     for symbol in common_symbols:
